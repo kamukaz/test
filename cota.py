@@ -5,7 +5,6 @@ from collections import Counter
 from random import randint
 import winsound
 from math import log,frexp,fmod,cos,sin
-from deco import*
 from decimal import*
 
 class cota():
