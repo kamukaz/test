@@ -7,7 +7,7 @@ from collections import Counter
 from random import randint
 from math import log,frexp,fmod,cos,sin
 from decimal import*
-class pwd():
+class cota():
    @staticmethod
    ##############################################
    def bix(seed,u,rrr,eee):		
