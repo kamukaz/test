@@ -7,9 +7,10 @@ from collections import Counter
 from random import randint
 from math import log,frexp,fmod,cos,sin
 from decimal import*
-
-##############################################
-def bix(seed,u,rrr,eee):		
+class pwd():
+   @staticmethod
+   ##############################################
+   def bix(seed,u,rrr,eee):		
        h=seed
        d=[int(h,i) for i in range(16,37)]
        F=[(bin(int(x,16)))[2:] for x in re.split(r'(\w{2})', seed) if x]
@@ -138,8 +139,9 @@ def bix(seed,u,rrr,eee):
        return(l,bool,fff)		
 
 
-##############################################
-def bjx(seed,uuu,rrr,sss):		
+   @staticmethod
+   ##############################################
+   def bjx(seed,uuu,rrr,sss):		
        hs=seed
        bn=('0'*64+(bin(int(hs,16)))[2:])[:256]
        t=[x for x in re.split(r'(\w{32})', bn) if x]
@@ -273,8 +275,9 @@ def bjx(seed,uuu,rrr,sss):
                   # break
        return(l,bool,z)
 	   
-##############################################
-def bsx(seed,uuu,rrr,sss):		
+   @staticmethod
+   ##############################################
+   def bsx(seed,uuu,rrr,sss):		
        hs=seed
        while True:
            lrc=[]
