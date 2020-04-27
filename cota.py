@@ -11,7 +11,7 @@ from deco import*
 from decimal import*
 
 ##############################################
-    def bix(seed,u,rrr,eee):		
+def bix(seed,u,rrr,eee):		
        h=seed
        d=[int(h,i) for i in range(16,37)]
        F=[(bin(int(x,16)))[2:] for x in re.split(r'(\w{2})', seed) if x]
@@ -141,7 +141,7 @@ from decimal import*
 
 
 ##############################################
-    def bjx(seed,uuu,rrr,sss):		
+def bjx(seed,uuu,rrr,sss):		
        hs=seed
        bn=('0'*64+(bin(int(hs,16)))[2:])[:256]
        t=[x for x in re.split(r'(\w{32})', bn) if x]
@@ -276,7 +276,7 @@ from decimal import*
        return(l,bool,z)
 	   
 ##############################################
-    def bsx(seed,uuu,rrr,sss):		
+def bsx(seed,uuu,rrr,sss):		
        hs=seed
        while True:
            lrc=[]
