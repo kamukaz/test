@@ -283,7 +283,7 @@ class cota():
            lrc=[]
            z=pwd.ran(40)
            hz=pwd.sha2(z)
-           x=6
+           x=7
            y=3
            sh='**'
            zh='**'
