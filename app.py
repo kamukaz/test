@@ -5,9 +5,9 @@ from cota import*
 import time
 
 
-betV=0.00000100
+betV=0.00000001
 bet =float('{0:.9f}'.format(betV))
-bal=0.00117943
+bal=0.00001000
 bals=('{0:.9f}'.format(bal))
 w='v'
 i=0
@@ -32,6 +32,11 @@ mmm =1
 eel =[0,1,2,3,4,5,6,7]
 eet =[0,1,2,3,4,5,6,7]
 last=['0']
+eq=[0.00000100]
+ep=[0.00000100,0.00000100]
+leq=0
+pay=2
+sjm=[]
 while True:
   if u==1:
        ci=ci+1
@@ -68,16 +73,58 @@ while True:
   if len(last)==3:
      last.remove(last[0])
      last.remove(last[1])
+  eq.append(bal)
+  #eq.sort()
+  ep.append(bal)
+  if len(eq)==3:
+         eq.remove(eq[0]) 
+  if len(ep)==10:
+         ep.remove(ep[0]) 
+  #print(ep[-1]<eq[-1],ep[-1],eq[-1])
   while True:
     if w=='v':
-        betV=bal*0.0005#0.00000050#bal*0.0005
+        sjm=[]
+        betV=0.00000001#0.00000050#bal*0.0005
         bet =float('{0:.8f}'.format(betV))
+        pay=3
+    if u>=1:
+        sjm.append(betV)
+    #if u%2==1 and u>0:
     if w=='l' :#and u%2==1:#and ii<4:
-        betV=betV*2
+        pay =2#round(2+(0.1*u),2)
+        betV=betV*2#(sum(sjm)*(1/(pay-1)))
         bet =float('{0:.8f}'.format(betV))
-        ooo =50.399
-        uuu =49.600
-        mmm =1
+    # if u%2==0:
+      # if w=='l' :#and u%2==1:#and ii<4:
+        # pay =round(2-(0.1*(u-1)),2)
+        # betV=(sum(sjm)*(1/(pay-1)))+0.00000001
+        # bet =float('{0:.8f}'.format(betV))
+    # if u==1 and betV==0.00000010:leq=eq[-2]
+    # #ep.sort()
+    # if ep[-1]>=leq :
+        # betV=0.00000010#0.00000050#bal*0.0005
+        # bet =float('{0:.8f}'.format(betV))
+        # ooo =9.818
+        # uuu =90.181
+        # mmm =0.1
+    # if u==1:
+        # betV=0.00000001
+    # if  ep[-1]<leq :#and u%2==1:#and ii<4:
+        # if w=='v':
+             # betV=0.00000001
+             # bet =float('{0:.8f}'.format(betV))
+             # ooo =50
+             # uuu =49
+             # mmm =1
+        # if w=='l':
+             # betV=betV*2
+             # bet =float('{0:.8f}'.format(betV))
+             # ooo =50
+             # uuu =49
+             # # ooo =9.818
+             # # uuu =90.181
+             		
+    # if ttt%8==0: betV=0.00000050
     # if ttt%8==0: betV=0.00000050
     # if ttt%8==1: betV=0.00000100
     # if ttt%8==2: betV=0.00000200
@@ -85,11 +132,6 @@ while True:
     # if ttt%8==4: betV=0.00000800
     # if ttt%8==5: betV=0.00000400
     # if ttt%8==6: betV=0.00000200
-    # if ttt%8==7: betV=0.00000100
-    # bet =float('{0:.8f}'.format(betV))
-    # ooo =60.319
-    # uuu =39.680
-    # mmm =1.5
     clt=''
     bool=''
     dd=''
@@ -101,7 +143,20 @@ while True:
            rrr=25
     if i%2==1:
            rrr=34
-    clt,bool,dd=cota.bsx(seed,ttt,u,sss)
+##########
+    if pay<2:
+         ooo =round(((100/pay)/100)*99.2,1)
+         uuu =round(100-((100/pay)/100)*99.2,1)
+         mmm =round(abs(pay-1),2)
+    if pay==2:
+         ooo =50.399
+         uuu =49.600
+         mmm =round(abs(pay-1),2)
+    if pay>2:
+         ooo =round(100-((100/pay)/100)*99.2,1)
+         uuu =round(((100/pay)/100)*99.2,1)
+         mmm =round(abs(pay-1),2)
+    clt,bool,dd=cota.bsx(seed,ttt,u,ooo,uuu)
     # if 1==1:
           # if u<2 :
              # clt,bool,dd=cota.bjx(seed,ttt,rrr)
@@ -129,6 +184,18 @@ while True:
     lcl=[int(i) for i in clf]
     lcl.sort()
     # if o>=4:bool=booool.replace(bool,'')
+    if pay<2:
+         ooo =round(((100/pay)/100)*99.2,1)
+         uuu =round(100-((100/pay)/100)*99.2,1)
+         mmm =round(abs(pay-1),2)
+    if pay==2:
+         ooo =49.600
+         uuu =50.399
+         mmm =round(abs(pay-1),2)
+    if pay<2:
+         ooo =round(100-((100/pay)/100)*99.2,1)
+         uuu =round(((100/pay)/100)*99.2,1)
+         mmm =round(abs(pay-1),2)
     if bool=='over' :#and len(str(clt))!=lcc  :#and fll not in lbb:#and len(str(clt))!=lcc :#and len(clt)!=lbb:
            lbb.append(fll)
            del lbb[0]
@@ -143,7 +210,8 @@ while True:
                  w='v'
                  bal=bal+(bet*mmm)
                  bals=('{0:.8f}'.format(bal))
-                 print('okkkkkkkkk','ov',ttt,'/',tuu,s,'   ',clt,(' '*(39-len(clt))),dn,cll,bals,'*',int(bet*10**8),'*')
+                 betC=('{0:.8f}'.format(betV))
+                 print('okkkkkkkkk','ov',ttt,'/',tuu,s,'   ',clt,(' '*(39-len(clt))),dn,ooo,bals,'*',betC,'*',mmm,u)
                  break
            elif dn<=ooo:
                  tuu=tuu+1
@@ -152,7 +220,8 @@ while True:
                  w='l'
                  bal=bal-bet
                  bals=('{0:.8f}'.format(bal))
-                 print('noooo----'+str(u),'ov',ttt,'/',tuu,s,'   ',clt,(' '*(39-len(clt))),dn,cll,bals,'*',int(bet*10**8),'*')
+                 betC=('{0:.8f}'.format(betV))
+                 print('noooo----'+str(u),'ov',ttt,'/',tuu,s,'   ',clt,(' '*(39-len(clt))),dn,ooo,bals,'*',betC,'*',mmm,u)
                  last.append(s)
                  break
     if bool=='under':# and len(str(clt))!=lcc  :#and fll not in lbb :#and len(str(clt))!=lcc :#and len(clt)!=lbb:
@@ -169,7 +238,8 @@ while True:
                  w='v'
                  bal=bal+(bet*mmm)
                  bals=('{0:.8f}'.format(bal))
-                 print('okkkkkkkkk','un',ttt,'/',tuu,s,'   ',clt,(' '*(39-len(clt))),dn,cll,bals,'*',int(bet*10**8),'*')
+                 betC=('{0:.8f}'.format(betV))
+                 print('okkkkkkkkk','un',ttt,'/',tuu,s,'   ',clt,(' '*(39-len(clt))),dn,uuu,bals,'*',betC,'*',mmm,u)
                  break
            elif dn>uuu:
                  tuu=tuu+1
@@ -178,11 +248,12 @@ while True:
                  w='l'
                  bal=bal-bet
                  bals=('{0:.8f}'.format(bal))
-                 print('noooo----'+str(u),'un',ttt,'/',tuu,s,'   ',clt,(' '*(39-len(clt))),dn,cll,bals,'*',int(bet*10**8),'*')
+                 betC=('{0:.8f}'.format(betV))
+                 print('noooo----'+str(u),'un',ttt,'/',tuu,s,'   ',clt,(' '*(39-len(clt))),dn,uuu,bals,'*',betC,'*',mmm,u)
                  last.append(s)
                  break
 				 
-  if bal<=betV:
+  if bal<=betV or pay<1.04:
           break	
   # if u==9:
      # break
