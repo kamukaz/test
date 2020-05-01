@@ -842,7 +842,7 @@ class cota():
                   bool='over'
                   l=q
                   break
-            if rz//10==9 and ttt%2==9 :#if rz<round(uuu,0):#and 50>rn and 50>rm:
+            if rz//10==1 and ttt%2==1 :#if rz<round(uuu,0):#and 50>rn and 50>rm:
                   bool='over'
                   l=q
                   break
