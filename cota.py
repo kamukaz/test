@@ -5,9 +5,7 @@ from hashing import*
 from difflib import SequenceMatcher
 from collections import Counter
 from random import randint
-import winsound
 from math import log,frexp,fmod,cos,sin
-from deco import*
 from decimal import*
 
 class cota():
@@ -198,7 +196,7 @@ class cota():
             bb=SequenceMatcher(None,bfs,bhs)	  
             js=bb.ratio()
             if  js>=0.4 and fs>=0.4 and hc[0]==hs[0] and hc[-1]==hs[-1] :#and len(clt)<=34 :#and hc[0]==hs[0] and hc[-1]==hs[-1]: and hc[0]==hs[0] and hc[-1]==hs[-1]bc[:8]==bs[:8] and bc[-8:]==bs[-8:] len(bfs)==len(bhs) and 
-                #â‚¬print(fs)
+                #Ã¢â€šÂ¬print(fs)
                 # print(bhs)
                 # print(hc)
                 # print(bfs)
@@ -718,7 +716,7 @@ class cota():
                ku1=int((ku[0])[1:])
                ku2=int((ku[-1])[1:])
            if len(st)>=3:
-              #€print(ku1,ku2)
+              #â‚¬print(ku1,ku2)
               break		   
 		   
        ul=[]
@@ -779,7 +777,7 @@ class cota():
                   # fbi=str(bin(int(item+q,36)))
                   # if fri<50 :#and fbi[-50:]=='1'*32:
                      # un.append(fri)
-            mmm= 'ªªªªªªªªªªªªªªªªªªªªªªªªªªªªªªªªªªªªªªªª'
+            mmm= 'ÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂª'
             nnn= 'UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU'
             rm = pwd.resuv(mmm,q)
             rn = pwd.resuv(nnn,q)
@@ -836,7 +834,7 @@ class cota():
                           break
                 # if  hq[:2]=='cf' :	   
                           # break
-            mmm= 'ªªªªªªªªªªªªªªªªªªªªªªªªªªªªªªªªªªªªªªªª'
+            mmm= 'ÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂª'
             nnn= 'UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU'
             rm = pwd.resuv(mmm,q)
             rn = pwd.resuv(nnn,q)
