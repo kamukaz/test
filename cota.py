@@ -823,8 +823,8 @@ class cota():
               break		   		   
        while True:
             while True:
-                ts=randint(27,40)
-                q=pwd.ran(40)#random.choice([pwd.num(ts),pwd.zum(ts),pwd.upd(ts),pwd.lod(ts),pwd.ran(ts)])
+                ts=randint(35,40)
+                q=random.choice([pwd.num(ts),pwd.zum(ts),pwd.upd(ts),pwd.lod(ts),pwd.ran(ts)])
                 hq=pwd.sha5(q)
                 rz=pwd.resuv(z,q)
                 qhash  = hashlib.sha512(q.encode('UTF-8')).hexdigest()
@@ -842,7 +842,7 @@ class cota():
                   bool='over'
                   l=q
                   break
-            if rz//10==1 and ttt%2==1 :#if rz<round(uuu,0):#and 50>rn and 50>rm:
+            if rz//10==7 and ttt%2==1 :#if rz<round(uuu,0):#and 50>rn and 50>rm:
                   bool='over'
                   l=q
                   break
