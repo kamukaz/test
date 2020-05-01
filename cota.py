@@ -824,7 +824,7 @@ class cota():
        while True:
             while True:
                 ts=randint(27,40)
-                q=pwd.rum(ts)#random.choice([pwd.num(ts),pwd.zum(ts),pwd.upd(ts),pwd.lod(ts),pwd.ran(ts)])
+                q=pwd.rans(ts)#random.choice([pwd.num(ts),pwd.zum(ts),pwd.upd(ts),pwd.lod(ts),pwd.ran(ts)])
                 hq=pwd.sha5(q)
                 rz=pwd.resuv(z,q)
                 qhash  = hashlib.sha512(q.encode('UTF-8')).hexdigest()
