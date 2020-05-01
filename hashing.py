@@ -65,7 +65,7 @@ class pwd():
        return char
    @staticmethod
    def rum(self):
-       char  = ''.join(random.choice('!"#$%&()*+,-./:♂♀;<=>?@[\]^_`{|}~'+"'") for x in range(self))
+       char  = ''.join(random.choice('Qr') for x in range(self))
        return char
    @staticmethod
    def resu(k1,k2):
