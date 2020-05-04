@@ -823,7 +823,7 @@ class cota():
        while True:
             bs=5
             while True:
-                ql=random.choice([list(pwd.upd(35))+['Cfj','cC'],list(pwd.lod(35))+['CH','ch9']])
+                ql=random.choice([list(pwd.upd(35))+['Cfj','cC'],list(pwd.lod(35))+['CH','CHu']])
                 random.shuffle(ql)
                 q=''.join([i for i in ql])#random.choice([pwd.num(ts),pwd.zum(ts),pwd.upd(ts),pwd.lod(ts),pwd.ran(ts)])
                 hq=pwd.sha5(q)
@@ -843,11 +843,11 @@ class cota():
             # if ic%2==0:
             fhash = hashlib.sha512((z+q).encode('UTF-8')).hexdigest()
             rf    =int(fhash[:5],16)
-            if rf//1000==777 and 'CH' in q:#65<rz<85 and 65<rn<85 and 'CH' in q  and 65<rq<85 and ttt%2==0:#and 50<rq :#and uuu%2==1:#and 50<rn and 50<rm:
+            if rz==rq>55 and 'CH' in q:#65<rz<85 and 65<rn<85 and 'CH' in q  and 65<rq<85 and ttt%2==0:#and 50<rq :#and uuu%2==1:#and 50<rn and 50<rm:
                   bool='over'
                   l=q
                   break
-            elif rf//1000==333 and 'cC' in q:#15<rz<35 and 15<rn<35 and 'CH' in q  and 15<rq<35 and ttt%2==1:#if rz<round(uuu,0):#and 50>rn and 50>rm:
+            elif rz==rq<45 and 'cC' in q:#15<rz<35 and 15<rn<35 and 'CH' in q  and 15<rq<35 and ttt%2==1:#if rz<round(uuu,0):#and 50>rn and 50>rm:
                   bool='under'
                   l=q
                   break
