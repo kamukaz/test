@@ -196,7 +196,7 @@ class cota():
             bb=SequenceMatcher(None,bfs,bhs)	  
             js=bb.ratio()
             if  js>=0.4 and fs>=0.4 and hc[0]==hs[0] and hc[-1]==hs[-1] :#and len(clt)<=34 :#and hc[0]==hs[0] and hc[-1]==hs[-1]: and hc[0]==hs[0] and hc[-1]==hs[-1]bc[:8]==bs[:8] and bc[-8:]==bs[-8:] len(bfs)==len(bhs) and 
-                #â‚¬print(fs)
+                #Ã¢â€šÂ¬print(fs)
                 # print(bhs)
                 # print(hc)
                 # print(bfs)
@@ -716,7 +716,7 @@ class cota():
                ku1=int((ku[0])[1:])
                ku2=int((ku[-1])[1:])
            if len(st)>=3:
-              #€print(ku1,ku2)
+              #â‚¬print(ku1,ku2)
               break		   
 		   
        ul=[]
@@ -777,7 +777,7 @@ class cota():
                   # fbi=str(bin(int(item+q,36)))
                   # if fri<50 :#and fbi[-50:]=='1'*32:
                      # un.append(fri)
-            mmm= 'ªªªªªªªªªªªªªªªªªªªªªªªªªªªªªªªªªªªªªªªª'
+            mmm= 'ÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂª'
             nnn= 'UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU'
             rm = pwd.resuv(mmm,q)
             rn = pwd.resuv(nnn,q)
@@ -816,7 +816,7 @@ class cota():
              # if hs[i:i+x] in hz or hz[i:i+x] in hs:
                         # sh=hs[i:i+x]
                         # zh=hz[i:i+x]
-           if hs[:5]==hz[:5]:#hs[:3]==hz[:3]: zh in hs or sh in hz:
+           if hs[:4]==hz[:4]:#hs[:3]==hz[:3]: zh in hs or sh in hz:
               # print(hs,sh)		   		   
               # print(hz,zh)		   		   
               break		   		   
@@ -836,7 +836,7 @@ class cota():
                           # break
                 # if  rq>50 and ic%2==1:	   
                           # break
-            mmm= 'ªªªªªªªªªªªªªªªªªªªªªªªªªªªªªªªªªªªªªªªª'
+            mmm= 'ÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂª'
             nnn= 'UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU'
             rm = pwd.resuv(mmm,q)
             rn = pwd.resuv(nnn,q)
