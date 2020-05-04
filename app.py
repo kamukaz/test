@@ -238,8 +238,3 @@ while True:
           break	
   # if u==9:
      # break
-	 
-#############***********second API:P6qKhsSD98F0R6xLh2MKTLhAUn4YyN7TY3BVQuy2NX0hF82lLz****************
-#############***********firstr API:QHrTy8jEUdJ2pKogLtXvt60UGqK3IXEp3pJwEtGn8hFFq6TzZ5****************
-#############***********Thirdd API:CS4ikvYnQ1bKr6gltVwHXyEOlFXjIosb7fNugJqDtD6976XsUw****************
-########cb60b9920e93b1eb949c0ca42a7db4c5b67564a6 
