@@ -810,7 +810,7 @@ class cota():
            hz=pwd.sha2(z)
            rz=pwd.resuv(z,'')
            rh=pwd.resuv(hz,' '*256)
-           x=4
+           x=6
            y=3
            sh='**'
            zh='**'
@@ -822,7 +822,7 @@ class cota():
              if hs[i:i+x] in hz or hz[i:i+x] in hs:
                         sh=hs[i:i+x]
                         zh=hz[i:i+x]
-           if (fs>=0.3 and fq>=0.3) and (zh in hs or sh in hz) :#hs[:3]==hz[:3] :#hs[:3]==hz[:3]: zh in hs or sh in hz:
+           if  (zh in hs or sh in hz) :#hs[:3]==hz[:3] :#hs[:3]==hz[:3]: zh in hs or sh in hz:
               # print(hs,sh)		   		   
               # print(hz,zh)		   		   
               break	   		   
@@ -851,19 +851,19 @@ class cota():
             # if ic%2==0:
             fhash = hashlib.sha512((z+q).encode('UTF-8')).hexdigest()
             rf    =int(fhash[:5],16)
-            if  rz>50 and rq>50 and car>=31 and hq2[:2]=='00' and 'cba' in q and u==0:
+            if  rz>50 and rq>50  and 'cba' in q and ts==0:#
                   bool='over'
                   l=q
                   break
-            if  rz<50 and rq<50 and car<=20 and hq2[:2]=='cf' and 'Cfj' in q and u==1:
+            if  rz<50 and rq<50 and 'Cfj' in q and ts==1:
                   bool='under'
                   l=q
                   break
-            if  rz>50 and rq>50 and car>=31 and hq2[:2]=='00' and 'cba' in q and u==2:
+            if  rz>50 and rq>50 and 'cba' in q and ts==2:
                   bool='under'
                   l=q
                   break
-            if  rz<50 and rq<50 and car<=20 and hq2[:2]=='cf' and 'Cfj' in q and u==3:
+            if  rz<50 and rq<50 and 'Cfj' in q and ts==3:
                   bool='over'
                   l=q
                   break
