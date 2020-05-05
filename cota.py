@@ -851,19 +851,19 @@ class cota():
             # if ic%2==0:
             fhash = hashlib.sha512((z+q).encode('UTF-8')).hexdigest()
             rf    =int(fhash[:5],16)
-            if  rz>50 and rq>50  and 'cba' in q and ts==0:#
+            if  rz>50   and 'cba' in q and ts==0:#
                   bool='over'
                   l=q
                   break
-            if  rz<50 and rq<50 and 'Cfj' in q and ts==1:
+            if  rz<50  and 'Cfj' in q and ts==1:
                   bool='under'
                   l=q
                   break
-            if  rz>50 and rq>50 and 'cba' in q and ts==2:
+            if  rz>50 and 'cba' in q and ts==2:
                   bool='under'
                   l=q
                   break
-            if  rz<50 and rq<50 and 'Cfj' in q and ts==3:
+            if  rz<50  and 'Cfj' in q and ts==3:
                   bool='over'
                   l=q
                   break
