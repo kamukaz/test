@@ -822,14 +822,14 @@ class cota():
              if hs[i:i+x] in hz or hz[i:i+x] in hs:
                         sh=hs[i:i+x]
                         zh=hz[i:i+x]
-           if  zh in hs or sh in hz or hs[:4]==hz[:4] :#hs[:3]==hz[:3]: zh in hs or sh in hz:
+           if  hs[:3]==hz[:3] and hs[-1]==hz[-1]:#hs[:3]==hz[:3]: zh in hs or sh in hz:
               # print(hs,sh)		   		   
               # print(hz,zh)		   		   
               break	   		   
        while True:
             bs=5
             while True:
-                ql=random.choice([list(pwd.ran(36))+['cC','cC'],list(pwd.ran(36))+['CH','CH']])
+                ql=random.choice([list(pwd.rand(36))+['cC','cC'],list(pwd.rand(36))+['CH','CH']])
                 random.shuffle(ql)
                 q  =''.join([i for i in ql])#random.choice([pwd.num(ts),pwd.zum(ts),pwd.upd(ts),pwd.lod(ts),pwd.ran(ts)])
                 hq =pwd.sha5(q)
@@ -855,7 +855,7 @@ class cota():
                   bool='over'
                   l=q
                   break
-            if  rz<50  and q.count('cC')>=2 and ts==1 and hq2[0]=='d':
+            if  rz<50  and q.count('cC')>=2 and ts==1 and len(str(rf))<6:
                   bool='under'
                   l=q
                   break
@@ -863,7 +863,7 @@ class cota():
                   bool='under'
                   l=q
                   break
-            if  rz<50  and q.count('cC')>=2 and ts==3 and hq2[0]=='d':
+            if  rz<50  and q.count('cC')>=2 and ts==3 and len(str(rf))<6:
                   bool='over'
                   l=q
                   break
