@@ -818,22 +818,22 @@ class cota():
            fs=cc.ratio()
            qq=SequenceMatcher(None,hs,hz)	  
            fq=qq.ratio()
-           # for i in range(63-x):
-             # if hs[i:i+x] in hz or hz[i:i+x] in hs:
-                        # sh=hs[i:i+x]
-                        # zh=hz[i:i+x]
-           if (fs>=0.35 and fq>=0.35) or (fs>=0.45 or fq>=0.45) :#hs[:3]==hz[:3] :#hs[:3]==hz[:3]: zh in hs or sh in hz:
+           for i in range(63-x):
+             if hs[i:i+x] in hz or hz[i:i+x] in hs:
+                        sh=hs[i:i+x]
+                        zh=hz[i:i+x]
+           if (fs>=0.3 and fq>=0.3) and (zh in hs or sh in hz) :#hs[:3]==hz[:3] :#hs[:3]==hz[:3]: zh in hs or sh in hz:
               # print(hs,sh)		   		   
               # print(hz,zh)		   		   
-              break		   		   
+              break	   		   
        while True:
             bs=5
             while True:
-                ql=random.choice([list(pwd.ran(35))+['Cfj','cC'],list(pwd.ran(35))+['CH','cba']])
+                ql=random.choice([list(pwd.upd(35))+['Cfj','cC'],list(pwd.lod(35))+['CH','ch9']])
                 random.shuffle(ql)
                 q  =''.join([i for i in ql])#random.choice([pwd.num(ts),pwd.zum(ts),pwd.upd(ts),pwd.lod(ts),pwd.ran(ts)])
                 hq =pwd.sha5(q)
-                hq2=pwd.md5(q)
+                hq2=pwd.sha2(q)
                 car=len([i for i in hq2 if i.islower()])
                 rz=pwd.resuv(z,q)
                 qhash  = hashlib.sha512(q.encode('UTF-8')).hexdigest()
@@ -851,22 +851,21 @@ class cota():
             # if ic%2==0:
             fhash = hashlib.sha512((z+q).encode('UTF-8')).hexdigest()
             rf    =int(fhash[:5],16)
-            if  rz>50 and rq>50 and car>=31 and hq2[:2]=='00' and 'cba' in q:
+            if  rz>50 and rq>50 and car>=31 and hq2[:2]=='00' and 'cba' in q and u==0:
                   bool='over'
                   l=q
                   break
-            if  rz<50 and rq<50 and car<=20 and hq2[:2]=='cf' and 'Cfj' in q:
+            if  rz<50 and rq<50 and car<=20 and hq2[:2]=='cf' and 'Cfj' in q and u==1:
                   bool='under'
                   l=q
                   break
-            # if ic%2==1:
-               # if 65<rz<85 and 65<rn<85 and 'CH' in q  and 65<rq<85 and ttt%2==0:#and 50<rq :#and uuu%2==1:#and 50<rn and 50<rm:
-                  # bool='over'
-                  # l=q
-                  # break
-               # if 15<rz<35 and 15<rn<35 and 'CH' in q  and 15<rq<35 and ttt%2==1:#if rz<round(uuu,0):#and 50>rn and 50>rm:
-                  # bool='under'
-                  # l=q
-                  # break
+            if  rz>50 and rq>50 and car>=31 and hq2[:2]=='00' and 'cba' in q and u==2:
+                  bool='under'
+                  l=q
+                  break
+            if  rz<50 and rq<50 and car<=20 and hq2[:2]=='cf' and 'Cfj' in q and u==3:
+                  bool='over'
+                  l=q
+                  break
 
        return(l,bool,z)
