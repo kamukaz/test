@@ -814,11 +814,15 @@ class cota():
            y=3
            sh='**'
            zh='**'
+           cc=SequenceMatcher(None,hz,hs)	  
+           fs=cc.ratio()
+           qq=SequenceMatcher(None,hs,hz)	  
+           fq=qq.ratio()
            # for i in range(63-x):
              # if hs[i:i+x] in hz or hz[i:i+x] in hs:
                         # sh=hs[i:i+x]
                         # zh=hz[i:i+x]
-           if hs[:3]==hz[:3] :#hs[:3]==hz[:3]: zh in hs or sh in hz:
+           if (fs>=0.5 and fq>=0.5) or (fs>=0.65 or fq>=0.65) :#hs[:3]==hz[:3] :#hs[:3]==hz[:3]: zh in hs or sh in hz:
               # print(hs,sh)		   		   
               # print(hz,zh)		   		   
               break		   		   
