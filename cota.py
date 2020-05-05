@@ -802,7 +802,7 @@ class cota():
                   # break
        return(l,bool,z)
 ##############################################
-    def bsx(seed,ttt,rrr,ooo,uuu,ic,u):		
+    def bsx(seed,ttt,rrr,ooo,uuu,ic,ts):		
        hs=seed
        while True:
            lrc=[]
