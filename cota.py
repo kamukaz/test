@@ -822,7 +822,7 @@ class cota():
              if hs[i:i+x] in hz or hz[i:i+x] in hs:
                         sh=hs[i:i+x]
                         zh=hz[i:i+x]
-           if  hs[:3]==hz[:3] and hs[-1]==hz[-1]:#hs[:3]==hz[:3]: zh in hs or sh in hz:
+           if  hs[:2]==hz[:2] and hs[-1]==hz[-1]:#hs[:3]==hz[:3]: zh in hs or sh in hz:
               # print(hs,sh)		   		   
               # print(hz,zh)		   		   
               break	   		   
