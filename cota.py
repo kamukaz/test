@@ -829,9 +829,9 @@ class cota():
        while True:
             bs=5
             while True:
-                ql=random.choice([list(pwd.rand(36))+['cC','cC'],list(pwd.rand(36))+['CH','CH']])
-                random.shuffle(ql)
-                q  =''.join([i for i in ql])#random.choice([pwd.num(ts),pwd.zum(ts),pwd.upd(ts),pwd.lod(ts),pwd.ran(ts)])
+               # ql=random.choice([list(pwd.rand(36))+['cC','cC'],list(pwd.rand(36))+['CH','CH']])
+               # random.shuffle(ql)
+                q  =random.choice([pwd.num(9),pwd.zum(10),pwd.upd(11),pwd.lod(12),pwd.ran(13)])#''.join([i for i in ql])#random.choice([pwd.num(ts),pwd.zum(ts),pwd.upd(ts),pwd.lod(ts),pwd.ran(ts)])
                 hq =pwd.sha5(q)
                 hq2=pwd.md5(q)
                 car=len([i for i in hq2 if i.islower()])
@@ -851,19 +851,19 @@ class cota():
             # if ic%2==0:
             fhash = hashlib.sha512(q.encode('UTF-8')).hexdigest()
             rf    =int(fhash[:5],16)
-            if  rz>50   and q.count('CH')>=2 and ts==0 and len(str(rf))>6:#
+            if  rz>50  and ts==0 and len(str(rf))>6:#
                   bool='over'
                   l=q
                   break
-            if  rz<50  and q.count('cC')>=2 and ts==1 and len(str(rf))<6:
+            if  rz<50   and ts==1 and len(str(rf))<6:
                   bool='under'
                   l=q
                   break
-            if  rz>50 and q.count('CH')>=2 and ts==2 and len(str(rf))>6:
+            if  rz>50 and ts==2 and len(str(rf))>6:
                   bool='under'
                   l=q
                   break
-            if  rz<50  and q.count('cC')>=2 and ts==3 and len(str(rf))<6:
+            if  rz<50  and ts==3 and len(str(rf))<6:
                   bool='over'
                   l=q
                   break
