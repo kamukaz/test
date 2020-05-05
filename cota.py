@@ -847,11 +847,11 @@ class cota():
             # if ic%2==0:
             fhash = hashlib.sha512((z+q).encode('UTF-8')).hexdigest()
             rf    =int(fhash[:5],16)
-            if rf//1000>=500 and rz>50 and rq>50 and rn>50 and rm>50 and car>=31 and hq2[0]=='0' and 'CH' in q and ttt%2==0:
+            if rf//1000>=500 and rz>50 and rq>50 and rn>50 and rm>50 and car>=31 and hq2[0]=='0' and 'CH' in q:
                   bool='over'
                   l=q
                   break
-            elif rf//1000<=500 and rz<50 and rq<50 and rn<50 and rm<50 and car<=20 and hq2[0]=='8' and 'cC' in q and ttt%2==1:
+            elif rf//1000<=500 and rz<50 and rq<50 and rn<50 and rm<50 and car<=20 and hq2[0]=='8' and 'cC' in q:
                   bool='under'
                   l=q
                   break
