@@ -822,18 +822,18 @@ class cota():
              if hs[i:i+x] in hz or hz[i:i+x] in hs:
                         sh=hs[i:i+x]
                         zh=hz[i:i+x]
-           if  (zh in hs or sh in hz) :#hs[:3]==hz[:3] :#hs[:3]==hz[:3]: zh in hs or sh in hz:
+           if  zh in hs or sh in hz or hs[:4]==hz[:4] :#hs[:3]==hz[:3]: zh in hs or sh in hz:
               # print(hs,sh)		   		   
               # print(hz,zh)		   		   
               break	   		   
        while True:
             bs=5
             while True:
-                ql=random.choice([list(pwd.upd(35))+['Cfj','cC'],list(pwd.lod(35))+['CH','ch9']])
+                ql=random.choice([list(pwd.ran(36))+['cC','cC'],list(pwd.ran(36))+['CH','CH']])
                 random.shuffle(ql)
                 q  =''.join([i for i in ql])#random.choice([pwd.num(ts),pwd.zum(ts),pwd.upd(ts),pwd.lod(ts),pwd.ran(ts)])
                 hq =pwd.sha5(q)
-                hq2=pwd.sha2(q)
+                hq2=pwd.md5(q)
                 car=len([i for i in hq2 if i.islower()])
                 rz=pwd.resuv(z,q)
                 qhash  = hashlib.sha512(q.encode('UTF-8')).hexdigest()
@@ -851,19 +851,19 @@ class cota():
             # if ic%2==0:
             fhash = hashlib.sha512((z+q).encode('UTF-8')).hexdigest()
             rf    =int(fhash[:5],16)
-            if  rz>50   and 'cba' in q and ts==0:#
+            if  rz>50   and q.count('CH')>=2 and ts==0 and len(str(rf))>6:#
                   bool='over'
                   l=q
                   break
-            if  rz<50  and 'Cfj' in q and ts==1:
+            if  rz<50  and q.count('cC')>=2 and ts==1 and hq2[0]=='d':
                   bool='under'
                   l=q
                   break
-            if  rz>50 and 'cba' in q and ts==2:
+            if  rz>50 and q.count('CH')>=2 and ts==2 and len(str(rf))>6:
                   bool='under'
                   l=q
                   break
-            if  rz<50  and 'Cfj' in q and ts==3:
+            if  rz<50  and q.count('cC')>=2 and ts==3 and hq2[0]=='d':
                   bool='over'
                   l=q
                   break
