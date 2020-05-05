@@ -825,11 +825,11 @@ class cota():
        while True:
             bs=5
             while True:
-                ql=random.choice([list(pwd.upd(35))+['Cfj','cC'],list(pwd.lod(35))+['CH','ch9']])
+                ql=random.choice([list(pwd.ran(35))+['Cfj','cC'],list(pwd.ran(35))+['CH','cba']])
                 random.shuffle(ql)
                 q  =''.join([i for i in ql])#random.choice([pwd.num(ts),pwd.zum(ts),pwd.upd(ts),pwd.lod(ts),pwd.ran(ts)])
                 hq =pwd.sha5(q)
-                hq2=pwd.sha2(q)
+                hq2=pwd.md5(q)
                 car=len([i for i in hq2 if i.islower()])
                 rz=pwd.resuv(z,q)
                 qhash  = hashlib.sha512(q.encode('UTF-8')).hexdigest()
@@ -847,11 +847,11 @@ class cota():
             # if ic%2==0:
             fhash = hashlib.sha512((z+q).encode('UTF-8')).hexdigest()
             rf    =int(fhash[:5],16)
-            if  rz>50 and rq>50 and car>=31 and hq2[:2]=='00' and 'CH' in q:
+            if  rz>50 and rq>50 and car>=31 and hq2[:2]=='00' and 'cba' in q:
                   bool='over'
                   l=q
                   break
-            if  rz<50 and rq<50 and car<=20 and hq2[:2]=='cf' and 'cC' in q:
+            if  rz<50 and rq<50 and car<=20 and hq2[:2]=='cf' and 'Cfj' in q:
                   bool='under'
                   l=q
                   break
