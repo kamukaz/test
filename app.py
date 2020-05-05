@@ -17,7 +17,7 @@ ttt=0
 tuu=0
 hi=0
 lw=0
-tc=[0,1,2]
+tc=[0,1,2,3]
 ic=0
 ci=0
 #ts=0
@@ -52,7 +52,7 @@ while True:
   k1=ki
   k2=ki+3
   if len(tc)==0:
-     tc=[0,1,2]
+     tc=[0,1,2,3]
   # if ci%2==0:
   ts=random.choice(tc)
   tc.remove(ts)
@@ -149,7 +149,7 @@ while True:
          ooo =round(100-((100/pay)/100)*99.2,3)
          uuu =round(((100/pay)/100)*99.2,3)
          mmm =round(abs(pay-1),2)
-    clt,bool,dd=cota.bsx(seed,ttt,rrr,ooo,uuu,ic,u)
+    clt,bool,dd=cota.bsx(seed,ttt,rrr,ooo,uuu,ic,ts)
     # if 1==1:
           # if u<2 :
              # clt,bool,dd=cota.bjx(seed,ttt,rrr)
