@@ -849,7 +849,7 @@ class cota():
             rm = pwd.resuv(mmm,q)
             rn = pwd.resuv(nnn,q)
             # if ic%2==0:
-            fhash = hashlib.sha512((z+q).encode('UTF-8')).hexdigest()
+            fhash = hashlib.sha512(q.encode('UTF-8')).hexdigest()
             rf    =int(fhash[:5],16)
             if  rz>50   and q.count('CH')>=2 and ts==0 and len(str(rf))>6:#
                   bool='over'
