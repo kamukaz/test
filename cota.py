@@ -808,6 +808,8 @@ class cota():
            lrc=[]
            z=pwd.ran(40)
            hz=pwd.sha2(z)
+           rz=pwd.resuv(z,'')
+           rh=pwd.resuv(hz,' '*256)
            x=4
            y=3
            sh='**'
@@ -816,17 +818,19 @@ class cota():
              # if hs[i:i+x] in hz or hz[i:i+x] in hs:
                         # sh=hs[i:i+x]
                         # zh=hz[i:i+x]
-           if hs[:4]==hz[:4]:#hs[:3]==hz[:3]: zh in hs or sh in hz:
+           if hs[:3]==hz[:3] and (rz-10)<=rh<=(rz+10):#hs[:3]==hz[:3]: zh in hs or sh in hz:
               # print(hs,sh)		   		   
               # print(hz,zh)		   		   
               break		   		   
        while True:
             bs=5
             while True:
-                ql=random.choice([list(pwd.upd(35))+['Cfj','cC'],list(pwd.lod(35))+['CH','CHu']])
+                ql=random.choice([list(pwd.upd(35))+['Cfj','cC'],list(pwd.lod(35))+['CH','ch9']])
                 random.shuffle(ql)
-                q=''.join([i for i in ql])#random.choice([pwd.num(ts),pwd.zum(ts),pwd.upd(ts),pwd.lod(ts),pwd.ran(ts)])
-                hq=pwd.sha5(q)
+                q  =''.join([i for i in ql])#random.choice([pwd.num(ts),pwd.zum(ts),pwd.upd(ts),pwd.lod(ts),pwd.ran(ts)])
+                hq =pwd.sha5(q)
+                hq2=pwd.sha2(q)
+                car=len([i for i in hq2 if i.islower()])
                 rz=pwd.resuv(z,q)
                 qhash  = hashlib.sha512(q.encode('UTF-8')).hexdigest()
                 #rq     = (int(qhash[:5],16) -((int(qhash[:5],16)//100000)*100000))//1000   
@@ -843,11 +847,11 @@ class cota():
             # if ic%2==0:
             fhash = hashlib.sha512((z+q).encode('UTF-8')).hexdigest()
             rf    =int(fhash[:5],16)
-            if rz==rq>55 and 'CH' in q:#65<rz<85 and 65<rn<85 and 'CH' in q  and 65<rq<85 and ttt%2==0:#and 50<rq :#and uuu%2==1:#and 50<rn and 50<rm:
+            if rf//1000>=500 and rz>50 and rq>50 and rn>50 and rm>50 and car>=31 and hq2[0]=='0' and 'CH' in q and ttt%2==0:
                   bool='over'
                   l=q
                   break
-            elif rz==rq<45 and 'cC' in q:#15<rz<35 and 15<rn<35 and 'CH' in q  and 15<rq<35 and ttt%2==1:#if rz<round(uuu,0):#and 50>rn and 50>rm:
+            elif rf//1000<=500 and rz<50 and rq<50 and rn<50 and rm<50 and car<=20 and hq2[0]=='8' and 'cC' in q and ttt%2==1:
                   bool='under'
                   l=q
                   break
