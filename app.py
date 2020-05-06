@@ -149,7 +149,7 @@ while True:
          ooo =round(100-((100/pay)/100)*99.2,3)
          uuu =round(((100/pay)/100)*99.2,3)
          mmm =round(abs(pay-1),2)
-    clt,bool,dd=cota.bun(seed,u)#bsx(seed,ttt,rrr,ooo,uuu,ic,ts)
+    clt,bool,dd=cota.bun(seed,ttt,u)#bsx(seed,ttt,rrr,ooo,uuu,ic,ts)
     # if 1==1:
           # if u<2 :
              # clt,bool,dd=cota.bjx(seed,ttt,rrr)
