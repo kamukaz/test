@@ -380,17 +380,18 @@ class cota():
             ov=[]
             unf=[]
             ovf=[]
-            uno=['0111110','0111110','0111110','0111110','0111110','011111','0111110','0111110','0111110','0111110','0111110']
-            ovo=list(pwd.zum(28)) 
-            all=ovo+uno+['1000','10001000','100010001000','10001','00010001000','10001000100010001000','1000']
-            ful='1'+''.join(random.sample(all,len(all)))
-            full=int(ful,2)
-            lll=pwd.hex36(full)
-            k=[x for x in range(len(lll))]
-            k=random.sample(k,randint(5,int((len(k)-1)/2)))
-            for i in k:
-                  lll=lll.replace(lll[i],(lll[i]).upper())
-                  l=pwd.ran(1)+lll#
+            #uno=['0111110','0111110','0111110','0111110','0111110','011111','0111110','0111110','0111110','0111110','0111110']
+            #ovo=list(pwd.zum(28)) 
+            #all=ovo+uno+['1000','10001000','100010001000','10001','00010001000','10001000100010001000','1000']
+            #ful='1'+''.join(random.sample(all,len(all)))
+            #full=int(ful,2)
+            #lll=pwd.hex36(full)
+            #k=[x for x in range(len(lll))]
+            #k=random.sample(k,randint(5,int((len(k)-1)/2)))
+            #for i in k:
+            #      lll=lll.replace(lll[i],(lll[i]).upper())
+            #      l=pwd.ran(1)+lll#
+            l=pwd.ran(6)
             lky = pwd.resu(l,'')
             lfri = (lky - ((lky // 100000) * 100000)) // 1000
             ggg= pwd.resuv(seed,' '*256)
