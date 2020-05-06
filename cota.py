@@ -196,7 +196,7 @@ class cota():
             bb=SequenceMatcher(None,bfs,bhs)	  
             js=bb.ratio()
             if  js>=0.4 and fs>=0.4 and hc[0]==hs[0] and hc[-1]==hs[-1] :#and len(clt)<=34 :#and hc[0]==hs[0] and hc[-1]==hs[-1]: and hc[0]==hs[0] and hc[-1]==hs[-1]bc[:8]==bs[:8] and bc[-8:]==bs[-8:] len(bfs)==len(bhs) and 
-                #â‚¬print(fs)
+                #Ã¢â€šÂ¬print(fs)
                 # print(bhs)
                 # print(hc)
                 # print(bfs)
@@ -349,7 +349,7 @@ class cota():
 	  
         return(l,bool,c)		
 ##############################################
-    def bun(seed,u):
+    def bun(seed,ttt,u):
         bool=''
         hs=seed
         yy=[16,17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35,36]
@@ -406,10 +406,10 @@ class cota():
                   fbi=str(bin(int(item+l,36)))
                   if fri<50 :#and fbi[-50:]=='1'*32:
                      un.append(fri)
-            if len(ov)>=70:#   and lfri<10 and ggg>=50:
+            if len(ov)>=65 and ttt%2==0:#   and lfri<10 and ggg>=50:
                   bool='over'
                   break
-            if len(un)>=70:#  and lfri>90 and ggg<50:
+            if len(un)>=65 and ttt%2==1:#  and lfri>90 and ggg<50:
                   bool='under'
                   break
 				  
@@ -711,7 +711,7 @@ class cota():
                ku1=int((ku[0])[1:])
                ku2=int((ku[-1])[1:])
            if len(st)>=3:
-              #€print(ku1,ku2)
+              #â‚¬print(ku1,ku2)
               break		   
 		   
        ul=[]
@@ -772,7 +772,7 @@ class cota():
                   # fbi=str(bin(int(item+q,36)))
                   # if fri<50 :#and fbi[-50:]=='1'*32:
                      # un.append(fri)
-            mmm= 'ªªªªªªªªªªªªªªªªªªªªªªªªªªªªªªªªªªªªªªªª'
+            mmm= 'ÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂª'
             nnn= 'UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU'
             rm = pwd.resuv(mmm,q)
             rn = pwd.resuv(nnn,q)
@@ -839,7 +839,7 @@ class cota():
                           # break
                 # if  rq>50 and ic%2==1:	   
                           # break
-            mmm= 'ªªªªªªªªªªªªªªªªªªªªªªªªªªªªªªªªªªªªªªªª'
+            mmm= 'ÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂªÂª'
             nnn= 'UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU'
             rm = pwd.resuv(mmm,q)
             rn = pwd.resuv(nnn,q)
